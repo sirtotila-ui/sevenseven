@@ -1294,10 +1294,14 @@ const App = () => {
               </div>
 
               <div className="hero-image">
-                <div className="hero-image-label">Panoramica attività</div>
-                <div className="hero-image-box">
-                  [Foto esterna dell&apos;attività con insegna, benzinaio e locale visibile]
-                </div>
+              <div className="hero-image-label">Panoramica attività</div>
+              <div className="hero-image-box" style={{ padding: 0 }}>
+                  <img
+                    src="/esterno-sevenseven.jpg"
+                    alt="Vista esterna del Caffè SevenSeven con insegna e area benzinaio"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "9px" }}
+                  />
+              </div>
                 <div className="hero-image-tags">
                   <div className="hero-image-tag">Bar · Colazioni · Pranzi veloci</div>
                   <div className="hero-image-tag">Autolavaggio self, automatico, a mano</div>
