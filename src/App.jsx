@@ -1122,7 +1122,7 @@ const App = () => {
                 onClick={() => scrollToId("top")}
                 style={{ cursor: "pointer" }}
               >
-                [NOME ATTIVITÀ] <span>Ravenna</span>
+                SevenSeven <span>Ravenna</span>
               </div>
 
               <div className="nav-links">
@@ -1671,8 +1671,8 @@ const App = () => {
         {/* Footer */}
         <footer className="footer">
           <div className="footer-inner">
-            <div className="footer-top">
-              <div className="footer-logo">[NOME ATTIVITÀ]</div>
+              <div className="footer-top">
+              <div className="footer-logo">SevenSeven</div>
               <div className="footer-services">
                 <span>Bar</span>·<span>Autolavaggio</span>·
                 <a
@@ -1695,9 +1695,9 @@ const App = () => {
               </div>
             </div>
 
-            <div className="footer-bottom">
+              <div className="footer-bottom">
               <div>
-                © 2026 [NOME ATTIVITÀ] — [INDIRIZZO]
+                © 2026 SevenSeven — [INDIRIZZO]
                 <br />
                 Questo sito non utilizza cookie di profilazione.
                 <br />
