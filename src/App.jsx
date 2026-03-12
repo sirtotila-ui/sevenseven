@@ -4,8 +4,8 @@ const App = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
-  const telefono = "[NUMERO]";
-  const whatsappNumber = "[NUMERO senza +]";
+  const telefono = "347 490 7093";
+  const whatsappNumber = "3474907093";
   const whatsappBaseText = "Ciao, vorrei informazioni!";
   const whatsappLavaggioText = "Ciao, vorrei prenotare un lavaggio!";
 
@@ -29,7 +29,7 @@ const App = () => {
   const faqItems = [
     {
       q: "Dove siete esattamente?",
-      a: "[INDIRIZZO] — siamo dietro il benzinaio/autolavaggio, zona [ZONA]. Non puoi sbagliare.",
+      a: "Via Naviglio, 22, 48123 Ravenna (RA) — all'interno dell'area del benzinaio, ingresso ben visibile dalla strada.",
     },
     {
       q: "Il bar è aperto anche la domenica?",
@@ -1596,7 +1596,7 @@ const App = () => {
                 <div className="contacts-list">
                   <div>
                     <div className="contacts-label">Indirizzo</div>
-                    <div>[INDIRIZZO — zona benzinaio, Ravenna]</div>
+                    <div>Via Naviglio, 22, 48123 Ravenna (RA)</div>
                   </div>
 
                   <div>
@@ -1635,7 +1635,14 @@ const App = () => {
                 </div>
 
                 <div className="contacts-map">
-                  [Google Maps — inserire embed dell&apos;indirizzo reale]
+                  <iframe
+                    title="Mappa SevenSeven"
+                    src="https://www.google.com/maps?q=Via+Naviglio,+22,+48123+Ravenna+RA&output=embed"
+                    style={{ border: 0, width: "100%", height: "100%", borderRadius: "12px" }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>
@@ -1692,7 +1699,7 @@ const App = () => {
                 </a>
               </div>
               <div className="footer-contacts">
-                <span>[INDIRIZZO — zona benzinaio, Ravenna]</span>
+              <span>Via Naviglio, 22, 48123 Ravenna (RA)</span>
                 <span>
                   Tel: <a href={telUrl}>+39 {telefono}</a>
                 </span>
@@ -1705,7 +1712,7 @@ const App = () => {
 
               <div className="footer-bottom">
               <div>
-                © 2026 SevenSeven — [INDIRIZZO]
+                © 2026 SevenSeven — Via Naviglio, 22, 48123 Ravenna (RA)
                 <br />
                 Questo sito non utilizza cookie di profilazione.
                 <br />
