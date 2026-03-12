@@ -1256,10 +1256,10 @@ const App = () => {
                 </div>
                 <div className="hero-meta">
                   <span>
-                    ☕ Bar: <strong>[ORARI_BAR]</strong>
+                    ☕ Bar: <strong>Lun–Sab 06:30–19:00 · Dom chiuso</strong>
                   </span>
                   <span>
-                    🚗 Autolavaggio: <strong>[ORARI_AUTOLAVAGGIO]</strong>
+                    🚗 Autolavaggio: <strong>Lavaggio automatico 24/7</strong>
                   </span>
                   <span>
                     🔧 Lattoneria: <strong>[ORARI_LATTONERIA]</strong>
@@ -1618,13 +1618,13 @@ const App = () => {
                   </div>
 
                   <div className="contacts-hours">
-                    <div className="contacts-hour-row">
+                  <div className="contacts-hour-row">
                       <div className="contacts-hour-label">☕ Bar</div>
-                      <div>[ORARI_BAR]</div>
+                      <div>Lun–Sab 06:30–19:00 · Dom chiuso</div>
                     </div>
                     <div className="contacts-hour-row">
-                      <div className="contacts-hour-label">🚗 Autolavaggio</div>
-                      <div>[ORARI_AUTOLAVAGGIO]</div>
+                      <div className="contacts-hour-label">🚗 Autolavaggio automatico</div>
+                      <div>24 ore su 24, 7 giorni su 7</div>
                     </div>
                     <div className="contacts-hour-row">
                       <div className="contacts-hour-label">🔧 Lattoneria</div>
@@ -1702,10 +1702,6 @@ const App = () => {
                 <span>
                   Tel: <a href={telUrl}>+39 {telefono}</a>
                 </span>
-                <span>
-                  WhatsApp: <a href={whatsappUrl}>+39 {whatsappNumber}</a>
-                </span>
-                <span>Email: [EMAIL]</span>
               </div>
             </div>
 
@@ -1734,7 +1730,7 @@ const App = () => {
           className="whatsapp-floating"
           aria-label="Scrivi su WhatsApp"
         >
-          <span>✉️</span>
+          <span>🟢</span>
         </a>
       </div>
     </>
