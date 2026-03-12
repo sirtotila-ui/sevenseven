@@ -1148,7 +1148,7 @@ const App = () => {
                   Autolavaggio
                 </button>
                 <a
-                  href="[URL del sito Lattoneria Ravennate su Vercel]"
+                  href="https://lattoneriaravennate.vercel.app"
                   className="nav-link nav-link-lattoneria"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1201,7 +1201,7 @@ const App = () => {
                   <span>Autolavaggio</span>
                 </button>
                 <a
-                  href="[URL del sito Lattoneria Ravennate su Vercel]"
+                  href="https://lattoneriaravennate.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="nav-mobile-link nav-mobile-link-lattoneria"
@@ -1283,7 +1283,7 @@ const App = () => {
                     <span>🚗 Autolavaggio</span>
                   </button>
                   <a
-                    href="[URL del sito Lattoneria Ravennate su Vercel]"
+                    href="https://lattoneriaravennate.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pill-service pill-latt"
@@ -1518,7 +1518,7 @@ const App = () => {
 
                 <div className="lattoneria-cta">
                   <a
-                    href="[URL del sito Lattoneria Ravennate su Vercel]"
+                    href="https://lattoneriaravennate.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-auto"
@@ -1679,8 +1679,8 @@ const App = () => {
               <div className="footer-logo">SevenSeven</div>
               <div className="footer-services">
                 <span>Bar</span>·<span>Autolavaggio</span>·
-                <a
-                  href="[URL del sito Lattoneria Ravennate su Vercel]"
+                  <a
+                    href="https://lattoneriaravennate.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
