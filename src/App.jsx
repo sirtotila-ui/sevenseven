@@ -109,7 +109,7 @@ const App = () => {
         :root {
           --bg-main: #0F0F0F;
           --bg-alt: #171717;
-          --accent: #3B82F6;
+          --accent: #EF4444;
           --accent-bar: #F59E0B;
           --accent-auto: #EA580C;
           --text-heading: #FFFFFF;
@@ -137,7 +137,7 @@ const App = () => {
 
         .app-root {
           min-height: 100vh;
-          background: radial-gradient(circle at top, rgba(59,130,246,0.2), transparent 55%), var(--bg-main);
+          background: radial-gradient(circle at top, rgba(239,68,68,0.2), transparent 55%), var(--bg-main);
         }
 
         main {
@@ -187,7 +187,7 @@ const App = () => {
           position: relative;
           backdrop-filter: blur(16px);
           background: linear-gradient(to bottom, rgba(15,15,15,0.96), rgba(15,15,15,0.85));
-          border-bottom: 1px solid rgba(59,130,246,0.15);
+          border-bottom: 1px solid rgba(239,68,68,0.4);
         }
 
         .navbar-inner {
@@ -221,10 +221,13 @@ const App = () => {
         }
 
         .nav-link {
+          background: transparent;
+          border: none;
           color: var(--text-muted);
           cursor: pointer;
           transition: color 0.15s ease;
           white-space: nowrap;
+          padding: 6px 0;
         }
 
         .nav-link:hover {
@@ -373,6 +376,8 @@ const App = () => {
           align-items: center;
           justify-content: space-between;
           cursor: pointer;
+          background: transparent;
+          border: none;
         }
 
         .nav-mobile-link span {
@@ -403,8 +408,8 @@ const App = () => {
           gap: 8px;
           padding: 6px 12px;
           border-radius: 999px;
-          border: 1px solid rgba(59,130,246,0.4);
-          background: linear-gradient(90deg, rgba(59,130,246,0.18), transparent);
+          border: 1px solid rgba(239,68,68,0.55);
+          background: linear-gradient(90deg, rgba(239,68,68,0.28), transparent);
           font-size: 0.78rem;
           color: var(--text-muted);
           margin-bottom: 14px;
@@ -499,7 +504,7 @@ const App = () => {
         .hero-image {
           border-radius: var(--radius-card);
           border: 1px solid rgba(148,163,184,0.18);
-          background: linear-gradient(145deg, rgba(59,130,246,0.18), rgba(15,15,15,0.95));
+          background: linear-gradient(145deg, rgba(239,68,68,0.18), rgba(15,15,15,0.95));
           padding: 18px 18px 20px;
           display: flex;
           flex-direction: column;
@@ -841,7 +846,7 @@ const App = () => {
         /* Contatti / mappa */
         .section-contacts {
           background-color: var(--bg-alt);
-          border-color: rgba(59,130,246,0.2);
+          border-color: rgba(239,68,68,0.4);
         }
 
         .contacts-layout {
@@ -938,6 +943,8 @@ const App = () => {
           cursor: pointer;
           font-size: 0.95rem;
           color: var(--text-heading);
+          background: transparent;
+          border: none;
         }
 
         .faq-toggle {
