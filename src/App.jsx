@@ -1412,14 +1412,13 @@ const App = () => {
                     <div className="auto-card-header">
                       <div className="auto-badge">01</div>
                     </div>
-                    <div className="auto-service-name">
-                      [NOME SERVIZIO 1 — es. Self-Service]
-                    </div>
+                    <div className="auto-service-name">Lavaggio Automatico</div>
                     <p className="auto-desc">
-                      [Descrizione — es. Lavaggio autonomo con idropulitrice
-                      professionale. Gettoni disponibili al bar. Aperto 24/7.]
+                      Portale automatico con programmi di lavaggio, cera e asciugatura.
+                      Perfetto quando hai poco tempo: entri, scegli il programma e in pochi
+                      minuti l&apos;auto è pronta.
                     </p>
-                    <div className="auto-price">[es. Da €3 / opzionale]</div>
+                    <div className="auto-price">[Prezzo lavaggio automatico]</div>
                   </div>
                   <div className="auto-placeholder">
                     [Foto area self-service con idropulitrice]
@@ -1432,14 +1431,13 @@ const App = () => {
                     <div className="auto-card-header">
                       <div className="auto-badge">02</div>
                     </div>
-                    <div className="auto-service-name">
-                      [NOME SERVIZIO 2 — es. Lavaggio Automatico]
-                    </div>
+                    <div className="auto-service-name">Box Manuale</div>
                     <p className="auto-desc">
-                      [Descrizione — es. Portale automatico con programmi lavaggio, cera
-                      e asciugatura. Pronto in 5 minuti.]
+                      Area self-service con lancia ad alta pressione, spazzola e prodotti
+                      dedicati. Scegli tu come lavare la macchina, con tutto il necessario
+                      sempre disponibile.
                     </p>
-                    <div className="auto-price">[es. Da €5 / opzionale]</div>
+                    <div className="auto-price">[Prezzo box manuale]</div>
                   </div>
                   <div className="auto-placeholder">
                     [Foto portale lavaggio automatico]
@@ -1453,14 +1451,13 @@ const App = () => {
                       <div className="auto-badge">03</div>
                       <div className="auto-tag-premium">Premium</div>
                     </div>
-                    <div className="auto-service-name">
-                      [NOME SERVIZIO 3 — es. Lavaggio a Mano Premium]
-                    </div>
+                    <div className="auto-service-name">Lavaggio su Richiesta</div>
                     <p className="auto-desc">
-                      [Descrizione — es. Lavaggio completo a mano, interni ed esterni.
-                      Aspirazione, lucidatura, profumazione. Su appuntamento.]
+                      Lavaggio completo studiato sulle tue esigenze: esterni, interni,
+                      cerchi, tappezzeria, trattamenti specifici. Ci scrivi cosa ti serve e
+                      prepariamo un servizio su misura.
                     </p>
-                    <div className="auto-price">[es. Da €15 / opzionale]</div>
+                    <div className="auto-price">[Prezzo lavaggio su richiesta]</div>
                   </div>
                   <div className="auto-placeholder">
                     [Foto operatore che lava auto a mano]
