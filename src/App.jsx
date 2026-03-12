@@ -51,23 +51,22 @@ const App = () => {
 
   const recensioni = [
     {
-      testo:
-        "Bar sempre aperto, personale gentile, caffè buono. E mentre aspetto mi lavano anche la macchina. Comodo non è abbastanza come parola.",
-      nome: "Stefano R.",
+      testo: "10 stelle solo per le bariste ❤️",
+      nome: "Fabio Nannini",
       piattaforma: "Google",
       stelle: "5",
     },
     {
       testo:
-        "Autolavaggio top. Ho provato il lavaggio a mano e la macchina sembrava appena uscita dal concessionario. Prezzi onesti per il risultato.",
-      nome: "Giulia P.",
+        "Personale davvero gentile. Dolce e salato di ottima qualità. Consigliatissimo!",
+      nome: "Carlo M",
       piattaforma: "Google",
       stelle: "5",
     },
     {
       testo:
-        "Mi hanno rifatto le grondaie di casa tramite la lattoneria. Lavoro preciso e pulito. Poi sono passato al bar a prendere il caffè. Servizio completo!",
-      nome: "Marco B.",
+        "Hanno ridato vita ad un impianto un po' in abbandono, prezzi carburante più bassi rispetto agli altri, impianto lavaggio ultima generazione funzionale e ben fatto, il bar offre molta scelta e prodotti buoni. Personale gentile, lo consiglio... continuate così!!!",
+      nome: "Cliente Google",
       piattaforma: "Google",
       stelle: "5",
     },
