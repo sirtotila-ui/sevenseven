@@ -1470,8 +1470,12 @@ const App = () => {
                     </p>
                     <div className="auto-price">[Prezzo lavaggio su richiesta]</div>
                   </div>
-                  <div className="auto-placeholder">
-                    [Foto operatore che lava auto a mano]
+                  <div className="auto-placeholder" style={{ padding: 0, background: "none" }}>
+                    <img
+                      src="/autolavaggio-mano.png"
+                      alt="Operatore che lava a mano e cura gli interni dell'auto"
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "9px" }}
+                    />
                   </div>
                 </article>
               </div>
