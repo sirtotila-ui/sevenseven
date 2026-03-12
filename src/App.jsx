@@ -1446,8 +1446,12 @@ const App = () => {
                     </p>
                     <div className="auto-price">[Prezzo box manuale]</div>
                   </div>
-                  <div className="auto-placeholder">
-                    [Foto portale lavaggio automatico]
+                  <div className="auto-placeholder" style={{ padding: 0, background: "none" }}>
+                    <img
+                      src="/autolavaggio-manuale.jpg"
+                      alt="Box manuale SevenSeven con auto e idropulitrice"
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "9px" }}
+                    />
                   </div>
                 </article>
 
