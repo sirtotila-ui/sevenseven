@@ -142,7 +142,7 @@ const App = () => {
         main {
           max-width: 1120px;
           margin: 0 auto;
-          padding: 88px 16px 80px;
+          padding: 64px 16px 64px;
         }
 
         h1, h2, h3, h4 {
@@ -395,10 +395,10 @@ const App = () => {
 
         /* Hero */
         .hero {
-          padding: 40px 0 48px;
+          padding: 28px 0 36px;
           display: grid;
           grid-template-columns: minmax(0, 1.4fr);
-          gap: 32px;
+          gap: 28px;
         }
 
         .hero-badge {
@@ -668,8 +668,11 @@ const App = () => {
 
         /* Autolavaggio */
         .section-auto {
-          background-color: var(--bg-main);
-          border-color: rgba(234,88,12,0.18);
+          background:
+            radial-gradient(circle at top, rgba(37,99,235,0.4), transparent 60%),
+            radial-gradient(circle at bottom, rgba(30,64,175,0.3), transparent 55%),
+            var(--bg-main);
+          border-color: rgba(37,99,235,0.45);
         }
 
         .auto-services-grid {
@@ -1019,27 +1022,6 @@ const App = () => {
           text-decoration: underline;
         }
 
-        /* WhatsApp floating button */
-        .whatsapp-floating {
-          position: fixed;
-          bottom: 24px;
-          right: 24px;
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          background-color: #25D366;
-          color: #ffffff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-          z-index: 1000;
-          cursor: pointer;
-        }
-
-        .whatsapp-floating span {
-          font-size: 26px;
-        }
 
         @media (min-width: 720px) {
           .navbar-inner {
@@ -1067,7 +1049,7 @@ const App = () => {
           }
 
           .hero {
-            padding-top: 52px;
+            padding-top: 36px;
           }
 
           .hero-layout {
@@ -1105,7 +1087,7 @@ const App = () => {
           }
 
           .hero {
-            padding-top: 60px;
+            padding-top: 44px;
           }
 
           .section {
@@ -1233,7 +1215,7 @@ const App = () => {
               <div>
                 <div className="hero-badge">
                   <span className="hero-badge-dot" />
-                  <span>📍 [ZONA] · Ravenna</span>
+                  <span>📍 Zona Naviglio · Ravenna</span>
                 </div>
                 <div className="hero-title">
                   <h1>
@@ -1260,9 +1242,6 @@ const App = () => {
                   </span>
                   <span>
                     🚗 Autolavaggio: <strong>Lavaggio automatico 24/7</strong>
-                  </span>
-                  <span>
-                    🔧 Lattoneria: <strong>[ORARI_LATTONERIA]</strong>
                   </span>
                 </div>
 
@@ -1421,7 +1400,6 @@ const App = () => {
                       Perfetto quando hai poco tempo: entri, scegli il programma e in pochi
                       minuti l&apos;auto è pronta.
                     </p>
-                    <div className="auto-price">[Prezzo lavaggio automatico]</div>
                   </div>
                   <div className="auto-placeholder" style={{ padding: 0, background: "none" }}>
                     <img
@@ -1444,7 +1422,6 @@ const App = () => {
                       dedicati. Scegli tu come lavare la macchina, con tutto il necessario
                       sempre disponibile.
                     </p>
-                    <div className="auto-price">[Prezzo box manuale]</div>
                   </div>
                   <div className="auto-placeholder" style={{ padding: 0, background: "none" }}>
                     <img
@@ -1468,7 +1445,6 @@ const App = () => {
                       cerchi, tappezzeria, trattamenti specifici. Ci scrivi cosa ti serve e
                       prepariamo un servizio su misura.
                     </p>
-                    <div className="auto-price">[Prezzo lavaggio su richiesta]</div>
                   </div>
                   <div className="auto-placeholder" style={{ padding: 0, background: "none" }}>
                     <img
@@ -1548,27 +1524,6 @@ const App = () => {
             </div>
           </section>
 
-          {/* Perché noi */}
-          <section className="section" aria-labelledby="why-title">
-            <div className="section-inner">
-              <div className="section-label">Perché Noi</div>
-              <div className="section-heading" id="why-title">
-                <h2>Perché Sceglierci</h2>
-              </div>
-              <div className="why-grid">
-                {whyUsItems.map((item) => (
-                  <article key={item.titolo} className="why-card">
-                    <div className="why-title">
-                      <span>{item.emoji}</span>
-                      <span>{item.titolo}</span>
-                    </div>
-                    <div>{item.desc}</div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Recensioni */}
           <section className="section" aria-labelledby="reviews-title">
             <div className="section-inner">
@@ -1624,11 +1579,6 @@ const App = () => {
                     </a>
                   </div>
 
-                  <div>
-                    <div className="contacts-label">Email</div>
-                    <div className="contacts-email">[EMAIL]</div>
-                  </div>
-
                   <div className="contacts-hours">
                   <div className="contacts-hour-row">
                       <div className="contacts-hour-label">☕ Bar</div>
@@ -1637,10 +1587,6 @@ const App = () => {
                     <div className="contacts-hour-row">
                       <div className="contacts-hour-label">🚗 Autolavaggio automatico</div>
                       <div>24 ore su 24, 7 giorni su 7</div>
-                    </div>
-                    <div className="contacts-hour-row">
-                      <div className="contacts-hour-label">🔧 Lattoneria</div>
-                      <div>[ORARI_LATTONERIA]</div>
                     </div>
                   </div>
                 </div>
@@ -1735,15 +1681,6 @@ const App = () => {
             </div>
           </div>
         </footer>
-
-        {/* Bottone WhatsApp fisso */}
-        <a
-          href={whatsappUrl}
-          className="whatsapp-floating"
-          aria-label="Scrivi su WhatsApp"
-        >
-          <span>🟢</span>
-        </a>
       </div>
     </>
   );
