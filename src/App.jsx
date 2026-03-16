@@ -603,8 +603,8 @@ const App = () => {
         }
 
         .bar-layout {
-          display: grid;
-          grid-template-columns: minmax(0, 1.4fr);
+          display: flex;
+          flex-direction: column;
           gap: 22px;
           margin-top: 20px;
         }
@@ -613,6 +613,37 @@ const App = () => {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
           gap: 14px;
+        }
+
+        .bar-bullets {
+          list-style: none;
+          padding: 0;
+          margin: 20px 0 0;
+          display: grid;
+          gap: 10px;
+          max-width: 560px;
+        }
+
+        .bar-bullets li {
+          display: grid;
+          gap: 4px;
+          padding: 12px 12px 12px 16px;
+          border-radius: 12px;
+          border: 1px solid rgba(148,163,184,0.16);
+          background: radial-gradient(circle at top left, rgba(255,255,255,0.06), rgba(15,15,15,0.7));
+          position: relative;
+        }
+
+        .bar-bullets-title {
+          font-family: 'Space Grotesk', system-ui;
+          font-weight: 600;
+          color: var(--text-heading);
+          letter-spacing: 0.01em;
+        }
+
+        .bar-bullets-text {
+          font-size: 0.92rem;
+          color: rgba(255,255,255,0.7);
         }
 
         .card-small {
@@ -647,6 +678,7 @@ const App = () => {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          order: -1;
         }
 
         .placeholder-img {
@@ -1057,7 +1089,12 @@ const App = () => {
           }
 
           .bar-layout {
+            display: grid;
             grid-template-columns: minmax(0,1.3fr) minmax(0,1.1fr);
+          }
+
+          .bar-image {
+            order: 0;
           }
 
           .auto-services-grid {
@@ -1308,42 +1345,26 @@ const App = () => {
               </p>
 
               <div className="bar-layout">
-                <div className="bar-services-grid" aria-label="Servizi del bar">
-                  <div className="card-small">
-                    <div className="card-small-title">
-                      <span className="card-small-emoji">☕</span> Caffetteria
-                    </div>
-                    <div className="card-small-text">
-                      Espresso, cappuccino, caffè speciali. Miscela selezionata,
-                      preparazione curata.
-                    </div>
-                  </div>
-                  <div className="card-small">
-                    <div className="card-small-title">
-                      <span className="card-small-emoji">🥐</span> Colazione
-                    </div>
-                    <div className="card-small-text">
-                      Brioche fresche, cornetti, torte. Sfornati ogni mattina.
-                    </div>
-                  </div>
-                  <div className="card-small">
-                    <div className="card-small-title">
-                      <span className="card-small-emoji">🥪</span> Pranzo Veloce
-                    </div>
-                    <div className="card-small-text">
-                      Panini, piadine, toast, piatti del giorno. Pranzo pronto in pochi
-                      minuti.
-                    </div>
-                  </div>
-                  <div className="card-small">
-                    <div className="card-small-title">
-                      <span className="card-small-emoji">🍺</span> Aperitivo e Bibite
-                    </div>
-                    <div className="card-small-text">
-                      Birre, vino, cocktail, bibite fresche. Anche da asporto.
-                    </div>
-                  </div>
-                </div>
+                <ul className="bar-bullets" aria-label="Punti forti del bar">
+                  <li>
+                    <span className="bar-bullets-title">Caffetteria curata</span>
+                    <span className="bar-bullets-text">
+                      Espresso e cappuccino fatti come si deve, miscela selezionata.
+                    </span>
+                  </li>
+                  <li>
+                    <span className="bar-bullets-title">Colazioni fresche</span>
+                    <span className="bar-bullets-text">
+                      Brioche e dolci del giorno, perfetti per partire bene.
+                    </span>
+                  </li>
+                  <li>
+                    <span className="bar-bullets-title">Pranzi veloci</span>
+                    <span className="bar-bullets-text">
+                      Panini e piatti rapidi quando hai poco tempo.
+                    </span>
+                  </li>
+                </ul>
 
                 <div className="bar-image">
                   <div className="placeholder-img" style={{ padding: 0, borderStyle: "solid" }}>
