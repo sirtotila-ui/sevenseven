@@ -72,29 +72,6 @@ const App = () => {
     },
   ];
 
-  const whyUsItems = [
-    {
-      emoji: "📍",
-      titolo: "Tutto in Un Posto",
-      desc: "Caffè, lavaggio auto e lattoneria. Non devi andare da 3 parti diverse.",
-    },
-    {
-      emoji: "⏰",
-      titolo: "Orari Comodi",
-      desc: "Bar aperto dalla mattina presto. Autolavaggio disponibile tutti i giorni. Lattoneria su appuntamento.",
-    },
-    {
-      emoji: "👨‍👩‍👧‍👦",
-      titolo: "Punto di Riferimento",
-      desc: "Siamo qui da anni. Ci conoscono tutti nella zona. Vieni e capirai perché.",
-    },
-    {
-      emoji: "💰",
-      titolo: "Prezzi Onesti",
-      desc: "Qualità e prezzo giusto. Su tutto. Dal caffè al rifacimento del tetto.",
-    },
-  ];
-
   const toggleFaq = (index) => {
     setOpenFaqIndex((prev) => (prev === index ? null : index));
   };
@@ -785,15 +762,54 @@ const App = () => {
 
         /* Lattoneria */
         .section-lattoneria {
-          background-color: var(--bg-alt);
-          border-color: rgba(234,88,12,0.15);
+          background:
+            radial-gradient(circle at top, rgba(239,68,68,0.20), transparent 55%),
+            rgba(23,23,23,1);
+          border-color: rgba(239,68,68,0.35);
+        }
+
+        .lattoneria-layout {
+          display: flex;
+          flex-direction: column;
+          gap: 22px;
+          margin-top: 20px;
         }
 
         .lattoneria-card {
-          background-color: var(--bg-main);
+          background:
+            radial-gradient(circle at top left, rgba(255,255,255,0.06), rgba(15,15,15,0.92));
           border-radius: var(--radius-card);
-          border: 1px solid rgba(234,88,12,0.15);
+          border: 1px solid rgba(148,163,184,0.18);
           padding: 24px 18px 24px;
+        }
+
+        .lattoneria-image {
+          border-radius: var(--radius-card);
+          padding: 16px;
+          background: radial-gradient(circle at top left, rgba(239,68,68,0.12), rgba(0,0,0,0.65));
+          border: 1px solid rgba(239,68,68,0.28);
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          order: -1;
+        }
+
+        .lattoneria-kicker {
+          font-size: 0.78rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+          margin-bottom: 10px;
+        }
+
+        .lattoneria-title {
+          margin: 0 0 10px;
+          font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+          line-height: 1.08;
+        }
+
+        .lattoneria-title span {
+          color: var(--accent);
         }
 
         .lattoneria-points {
@@ -821,6 +837,31 @@ const App = () => {
         .lattoneria-inline {
           font-size: 0.85rem;
           color: var(--text-muted);
+        }
+
+        .lattoneria-offer {
+          margin-top: 16px;
+          border-radius: var(--radius-card);
+          border: 1px solid rgba(148,163,184,0.18);
+          background: rgba(0,0,0,0.35);
+          padding: 14px 14px 12px;
+        }
+
+        .lattoneria-offer-label {
+          font-size: 0.78rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+          margin-bottom: 8px;
+        }
+
+        .lattoneria-checks {
+          margin: 0;
+          padding-left: 18px;
+          display: grid;
+          gap: 6px;
+          color: rgba(255,255,255,0.7);
+          font-size: 0.92rem;
         }
 
         /* Perché noi */
@@ -1094,6 +1135,15 @@ const App = () => {
           }
 
           .bar-image {
+            order: 0;
+          }
+
+          .lattoneria-layout {
+            display: grid;
+            grid-template-columns: minmax(0,1.3fr) minmax(0,1.1fr);
+          }
+
+          .lattoneria-image {
             order: 0;
           }
 
@@ -1492,53 +1542,73 @@ const App = () => {
             aria-labelledby="lattoneria-title"
           >
             <div className="section-inner section-lattoneria">
-              <div className="lattoneria-card">
-                <div className="section-label">🔧 Lattoneria Ravennate</div>
-                <div className="section-heading" id="lattoneria-title">
-                  <h2>
-                    Coperture, Grondaie
-                    <span className="section-heading-accent-auto">
-                      {" "}
-                      e Lattoneria Edile.
-                    </span>
+              <div className="lattoneria-layout">
+                <div className="lattoneria-card">
+                  <div className="lattoneria-kicker">
+                    🔧 Lattoneria edile · Ravenna e provincia
+                  </div>
+                  <h2 className="lattoneria-title" id="lattoneria-title">
+                    Il tuo tetto <span>in mani sicure</span>
                   </h2>
-                </div>
-                <p className="section-text">
-                  Lattoneria Ravennate è la nostra divisione specializzata in coperture,
-                  grondaie, pluviali e lattoneria edile su misura. Lavoriamo su tutto il
-                  territorio di Ravenna e provincia. Sopralluogo e preventivo gratuito.
-                </p>
+                  <p className="section-text">
+                    Coperture, grondaie, pluviali e lattoneria edile su misura. Sopralluogo
+                    e preventivo gratuito.
+                  </p>
 
-                <div className="lattoneria-points">
-                  <div className="lattoneria-point">
-                    <span>🔧</span>
-                    <span>Coperture e Tetti</span>
-                  </div>
-                  <div className="lattoneria-point">
-                    <span>🏠</span>
-                    <span>Grondaie e Pluviali</span>
-                  </div>
-                  <div className="lattoneria-point">
-                    <span>🛡️</span>
-                    <span>Bonifica Amianto</span>
-                  </div>
-                  <div className="lattoneria-point">
-                    <span>📋</span>
-                    <span>Preventivo Gratuito</span>
+                  <ul className="bar-bullets" aria-label="Punti chiave lattoneria">
+                    <li>
+                      <span className="bar-bullets-title">Su misura</span>
+                      <span className="bar-bullets-text">
+                        Lavorazioni precise per ogni tipo di copertura e dettaglio.
+                      </span>
+                    </li>
+                    <li>
+                      <span className="bar-bullets-title">Materiali di qualità</span>
+                      <span className="bar-bullets-text">
+                        Rame, alluminio, inox e lamiera: scegliamo la soluzione giusta.
+                      </span>
+                    </li>
+                    <li>
+                      <span className="bar-bullets-title">Sopralluogo gratuito</span>
+                      <span className="bar-bullets-text">
+                        Veniamo, misuriamo e ti facciamo un preventivo chiaro e trasparente.
+                      </span>
+                    </li>
+                  </ul>
+
+                  <div className="lattoneria-cta">
+                    <a
+                      href="https://lattoneriaravennate.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-secondary"
+                    >
+                      Vai al Sito Lattoneria Ravennate →
+                    </a>
+                    <div className="lattoneria-inline">
+                      oppure chiama <a href={telUrl}>+39 {telefono}</a>
+                    </div>
                   </div>
                 </div>
 
-                <div className="lattoneria-cta">
-                  <a
-                    href="https://lattoneriaravennate.vercel.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-auto"
-                  >
-                    Vai al Sito Lattoneria Ravennate →
-                  </a>
-                  <div className="lattoneria-inline">
-                    oppure chiama <a href={telUrl}>+39 {telefono}</a>
+                <div className="lattoneria-image">
+                  <div className="placeholder-img" style={{ padding: 0, borderStyle: "solid" }}>
+                    <img
+                      src="/lattoneria-tetto.png"
+                      alt="Operatore al lavoro su copertura del tetto"
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }}
+                    />
+                  </div>
+                  <div className="bar-cta">
+                    <a
+                      href="https://lattoneriaravennate.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                      style={{ width: "fit-content" }}
+                    >
+                      Richiedi Preventivo
+                    </a>
                   </div>
                 </div>
               </div>
