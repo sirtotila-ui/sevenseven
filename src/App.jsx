@@ -15,7 +15,7 @@ const App = () => {
   const whatsappLavaggioUrl = `https://wa.me/39${whatsappNumber}?text=${encodeURIComponent(
     whatsappLavaggioText
   )}`;
-  const telUrl = `tel:+39${telefono}`;
+  const telUrl = `tel:+39${whatsappNumber}`;
 
   const scrollToId = (id) => {
     const el = document.getElementById(id);
@@ -33,11 +33,11 @@ const App = () => {
     },
     {
       q: "Il bar è aperto anche la domenica?",
-      a: "[ORARI DOMENICA — chiedere al cliente]",
+      a: "No, il bar e chiuso la domenica. Dal lunedi al sabato e aperto dalle 06:30 alle 19:00.",
     },
     {
       q: "L'autolavaggio self-service è aperto la sera?",
-      a: "[ORARI SELF-SERVICE — chiedere al cliente]",
+      a: "Si, l'autolavaggio automatico e self-service e aperto 24 ore su 24, 7 giorni su 7.",
     },
     {
       q: "Come prenoto il lavaggio a mano?",
@@ -791,7 +791,6 @@ const App = () => {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          order: -1;
         }
 
         .lattoneria-kicker {
@@ -1666,7 +1665,7 @@ const App = () => {
                   <div>
                     <div className="contacts-label">WhatsApp</div>
                     <a href={whatsappUrl} className="contacts-whatsapp">
-                      +39 {whatsappNumber}
+                      Chat WhatsApp
                     </a>
                   </div>
 
